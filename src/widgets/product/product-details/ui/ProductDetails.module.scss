@@ -1,0 +1,25 @@
+@use 'sass:math';
+@import 'shared/styles/mixins.scss';
+@import 'shared/styles/variables.scss';
+
+.not-found {
+}
+
+.skeleton-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.skeleton {
+	display: flex;
+	align-items: center;
+	gap: rem(30);
+	@media (max-width: $pc) {
+		justify-content: center;
+	}
+	@media (max-width: $tablet) {
+		flex-direction: column;
+		align-items: flex-start;
+		align-self: center;
+	}
+}

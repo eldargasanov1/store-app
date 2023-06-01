@@ -1,0 +1,30 @@
+@use 'sass:math';
+@import 'shared/styles/mixins.scss';
+@import 'shared/styles/variables.scss';
+
+.product-card-light {
+	width: rem(230);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: rem(20);
+}
+
+.image-wrapper {
+	width: 100%;
+	height: rem(230);
+}
+
+.image {
+	width: 100%;
+	height: 100%;
+}
+
+.title {
+	max-width: rem(180);
+	font-size: rem(15);
+	line-height: math.div(18, 15);
+	font-weight: 600;
+	color: #fff;
+	text-align: center;
+}

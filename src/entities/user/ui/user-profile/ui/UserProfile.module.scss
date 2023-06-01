@@ -1,0 +1,43 @@
+@use 'sass:math';
+@import 'shared/styles/mixins.scss';
+@import 'shared/styles/variables.scss';
+
+.wrapper {
+	position: relative;
+}
+
+.user-profile {
+	display: flex;
+	align-items: center;
+	gap: rem(10);
+}
+
+.avatar {
+	width: 36px;
+	height: 36px;
+	img {
+		border-radius: 50%;
+	}
+}
+
+.name {
+	font-size: rem(11);
+	line-height: math.div(14, 11);
+	color: $white2;
+	@media (max-width: $mobile) {
+		display: none;
+		font-size: rem(100);
+	}
+}
+
+.secondaryAction {
+	position: absolute;
+	top: 125%;
+	left: 0;
+	width: auto;
+	height: auto;
+	@media (max-width: $mobile) {
+		left: auto;
+		right: 0;
+	}
+}

@@ -1,0 +1,15 @@
+@use 'sass:math';
+@import 'shared/styles/mixins.scss';
+@import 'shared/styles/variables.scss';
+
+.oops {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	font-size: rem(48);
+	height: 50vh;
+	p:first-child {
+		color: #e06fe0;
+	}
+}

@@ -1,0 +1,16 @@
+@use 'sass:math';
+@import 'shared/styles/mixins.scss';
+@import 'shared/styles/variables.scss';
+
+.search-input {
+	width: rem(500);
+	font-size: rem(16);
+	font-weight: 700;
+	align-self: center;
+	@media (max-width: $mobile) {
+		width: rem(230);
+		svg {
+			margin: 0 rem(10) !important;
+		}
+	}
+}

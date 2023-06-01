@@ -1,0 +1,127 @@
+@use 'sass:math';
+@import 'shared/styles/mixins.scss';
+@import 'shared/styles/variables.scss';
+
+.big-banner {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: rem(570);
+	background-color: $black2;
+	border-radius: 6px;
+	@media (max-width: $pc) {
+		flex-direction: column-reverse;
+		height: auto;
+	}
+}
+
+.content {
+	position: relative;
+	width: 50%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: rem(74) rem(30);
+	@media (max-width: $pc) {
+		width: 100%;
+	}
+	@media (max-width: $mobileSmall) {
+		padding: rem(25);
+	}
+}
+
+.info {
+	width: rem(388);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: rem(27);
+	@media (max-width: $mobileSmall) {
+		width: 100%;
+	}
+}
+
+.text-block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-transform: uppercase;
+	font-weight: 300;
+	color: $purple2;
+}
+.text {
+	font-size: rem(70);
+	line-height: math.div(85, 70);
+	@media (max-width: $mobileSmall) {
+		font-size: rem(40);
+	}
+}
+.main-text {
+	font-size: rem(150);
+	line-height: math.div(183, 150);
+	@media (max-width: $mobileSmall) {
+		font-size: rem(100);
+	}
+}
+
+.shoe {
+	position: absolute !important;
+	bottom: 74px;
+	left: -25px;
+	width: rem(216);
+	height: rem(180);
+	z-index: 5;
+	@media (max-width: $pc) {
+		@include adaptiveValue('left', 250, 0, $maxWidthContainer, $mobileValue);
+	}
+	@media (max-width: $mobile) {
+		display: none;
+	}
+}
+
+.devices {
+	position: absolute !important;
+	bottom: -24px;
+	right: -24px;
+	width: rem(269);
+	height: rem(151);
+	z-index: 5;
+	@media (max-width: $pc) {
+		@include adaptiveValue('right', 230, -25, $maxWidthContainer, $mobileValue);
+	}
+	@media (max-width: $mobile) {
+		display: none;
+	}
+}
+
+.image {
+	width: 50%;
+	height: 100%;
+	@media (max-width: $pc) {
+		width: 100%;
+		height: auto;
+		padding: 50%;
+	}
+}
+
+.image-text {
+	position: absolute;
+	width: rem(185);
+	bottom: 24px;
+	left: 50%;
+	margin-left: rem(-92.5);
+	font-size: rem(20);
+	font-weight: 500;
+	line-height: math.div(24, 20);
+	color: $black1;
+	span {
+		color: $purple2;
+	}
+}
+
+.button {
+	font-size: rem(20);
+	line-height: math.div(24, 20);
+	font-weight: 600;
+}

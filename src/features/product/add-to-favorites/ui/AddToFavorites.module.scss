@@ -1,0 +1,13 @@
+@use 'sass:math';
+@import 'shared/styles/mixins.scss';
+@import 'shared/styles/variables.scss';
+
+.add-to-favorites {
+	background-color: $gray1;
+	&:hover {
+		background-color: #444b50;
+	}
+	&:active {
+		background-color: #323b42;
+	}
+}

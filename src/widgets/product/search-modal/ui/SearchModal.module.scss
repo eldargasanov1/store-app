@@ -1,0 +1,70 @@
+@use 'sass:math';
+@import 'shared/styles/mixins.scss';
+@import 'shared/styles/variables.scss';
+
+.search-modal {
+	position: relative;
+	width: 95vw;
+	height: 95vh;
+	background-color: $black2;
+	padding: rem(25);
+	margin: rem(25);
+	border-radius: 6px;
+	border: 1px solid $purple1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: rem(25);
+}
+
+.top {
+	display: flex;
+	flex-direction: column;
+	gap: rem(25);
+}
+
+.filters {
+	display: flex;
+	align-items: center;
+	gap: rem(15);
+	z-index: 1000;
+	@media (max-width: $tablet) {
+		flex-direction: column;
+	}
+}
+
+.search-filters {
+	@media (max-width: $mobile) {
+		flex-direction: column;
+		gap: rem(15);
+	}
+}
+
+.products {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: rem(20);
+	flex: 1 1 auto;
+	overflow: auto;
+}
+
+.big-text {
+	font-size: rem(40);
+	padding: rem(40) 0 rem(60);
+	font-weight: 600;
+	align-self: center;
+	margin: 0 auto;
+}
+
+.close-modal {
+	position: absolute;
+	top: rem(25);
+	right: rem(25);
+	width: rem(24);
+	height: rem(24);
+	@media (max-width: $mobileSmall) {
+		top: rem(2);
+		right: rem(2);
+	}
+}

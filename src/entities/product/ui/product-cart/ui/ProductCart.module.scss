@@ -1,0 +1,120 @@
+@use 'sass:math';
+@import 'shared/styles/mixins.scss';
+@import 'shared/styles/variables.scss';
+
+.product-cart {
+	display: grid;
+	grid-template-columns: 2fr max-content 1fr 1.2fr 1fr 64px;
+	align-items: center;
+	padding: rem(12) rem(16);
+	background-color: $black1;
+	border-radius: 8px;
+	@media (max-width: $tablet) {
+		grid-template-columns: 1fr;
+		grid-template-rows: 4fr repeat(4, 1fr);
+		max-width: max-content;
+	}
+}
+
+.link-block {
+	display: flex;
+	align-items: center;
+	gap: rem(15);
+	@media (max-width: $tablet) {
+		flex-direction: column;
+	}
+}
+
+.image {
+	width: rem(100);
+	height: rem(45);
+	img {
+		border-radius: 6px;
+	}
+	@media (max-width: $tablet) {
+		width: rem(185);
+		height: rem(90);
+	}
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	gap: rem(3);
+	@media (max-width: $tablet) {
+		align-self: flex-start;
+	}
+}
+
+.title {
+	font-size: rem(13);
+	line-height: math.div(16, 13);
+	font-weight: 600;
+	color: #fff;
+	max-width: rem(120);
+}
+
+.category {
+	font-size: rem(10);
+	line-height: math.div(12, 10);
+	font-weight: 500;
+	color: $white2;
+}
+
+.product-info {
+	font-size: rem(13);
+	line-height: math.div(16, 13);
+	font-weight: 600;
+	color: #fff;
+
+	div {
+		display: grid;
+		grid-template-columns: rem(45) max-content;
+
+		span {
+			color: $purple2;
+		}
+	}
+}
+
+.price {
+	font-size: rem(20);
+	line-height: math.div(24, 20);
+	font-weight: 700;
+	color: #fff;
+	text-align: right;
+	@media (max-width: $tablet) {
+		text-align: left;
+	}
+}
+
+.quantity {
+	justify-self: end;
+	@media (max-width: $tablet) {
+		justify-self: center;
+	}
+}
+
+.total-price {
+	font-size: rem(22);
+	line-height: math.div(27, 22);
+	font-weight: 700;
+	color: $purple2;
+	text-align: right;
+	@media (max-width: $tablet) {
+		text-align: center;
+	}
+}
+
+.remove {
+	justify-self: end;
+	width: rem(24);
+	height: rem(24);
+}
+
+.quantity-and-remove {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: rem(10);
+}

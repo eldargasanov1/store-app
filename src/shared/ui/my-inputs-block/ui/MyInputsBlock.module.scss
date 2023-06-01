@@ -1,0 +1,9 @@
+@use 'sass:math';
+@import 'shared/styles/mixins.scss';
+@import 'shared/styles/variables.scss';
+
+.my-inputs-block {
+	display: flex;
+	align-items: center;
+	gap: rem(20);
+}

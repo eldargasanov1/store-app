@@ -1,0 +1,52 @@
+@use 'sass:math';
+@import 'shared/styles/mixins.scss';
+@import 'shared/styles/variables.scss';
+
+.search-button {
+	display: flex;
+	align-items: center;
+	background-color: $black2;
+	border-radius: 6px;
+	@media (max-width: $mobile) {
+		background-color: inherit;
+	}
+}
+
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: rem(7) rem(10);
+	@media (max-width: $mobile) {
+		padding: 0;
+	}
+}
+
+.icon {
+	width: rem(13);
+	height: rem(13);
+	use {
+		fill: $gray1;
+	}
+	@media (max-width: $mobile) {
+		width: rem(22);
+		height: rem(22);
+		use {
+			fill: $white2;
+		}
+	}
+}
+
+.input {
+	width: rem(270);
+	padding: 0 rem(6);
+	font-size: rem(11);
+	line-height: math.div(14, 11);
+	color: $white2;
+	background-color: inherit;
+	flex: 1 1 auto;
+	text-align: left;
+	@media (max-width: $mobile) {
+		display: none;
+	}
+}

@@ -1,0 +1,15 @@
+@use 'sass:math';
+@import 'shared/styles/mixins.scss';
+@import 'shared/styles/variables.scss';
+
+.badge {
+	position: absolute;
+	min-width: 12px;
+	height: 12px;
+	text-align: center;
+	background-color: $purple1;
+	border-radius: 50%;
+	font-size: rem(9);
+	line-height: math.div(11, 9);
+	color: $white1;
+}

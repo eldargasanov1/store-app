@@ -1,0 +1,29 @@
+@use 'sass:math';
+@import 'shared/styles/mixins.scss';
+@import 'shared/styles/variables.scss';
+
+.header {
+	position: relative;
+	padding: rem(20);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	@media (max-width: $mobileSmall) {
+		padding: rem(20) 0;
+	}
+}
+
+.links {
+	display: flex;
+	align-items: center;
+	gap: rem(20);
+}
+
+.search-list {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	border: 2px solid $purple2;
+}

@@ -1,0 +1,35 @@
+@use 'shared/styles/style.scss';
+@import 'shared/styles/variables.scss';
+
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: inherit;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: $purple1;
+	border-radius: 3px;
+}
+
+::-webkit-search-cancel-button {
+	-webkit-appearance: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+body {
+	background-color: $black1;
+	--swiper-navigation-size: 20px;
+	--swiper-navigation-color: #8b57c6;
+}

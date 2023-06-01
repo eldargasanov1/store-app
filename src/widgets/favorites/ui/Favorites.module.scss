@@ -1,0 +1,46 @@
+@use 'sass:math';
+@import 'shared/styles/mixins.scss';
+@import 'shared/styles/variables.scss';
+
+.favorites {
+	display: flex;
+	flex-direction: column;
+	gap: rem(15);
+	height: 100%;
+	padding: rem(5) rem(12);
+	@media (max-width: $mobileSmall) {
+		padding: rem(5) rem(10);
+	}
+}
+
+.title {
+	font-size: rem(20);
+	line-height: math.div(24, 20);
+	font-weight: 600;
+	color: #fff;
+}
+
+.favorites-list {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: rem(30);
+	flex: 1 1 auto;
+	overflow: auto;
+	flex-wrap: wrap;
+	border-radius: 8px;
+	max-height: rem(600);
+}
+
+.big-text {
+	font-size: rem(40);
+	padding: rem(40) 0 rem(60);
+	font-weight: 600;
+	align-self: center;
+	margin: 0 auto;
+	flex: 1 1 auto;
+	text-align: center;
+	&.order {
+		color: #6bdf54;
+	}
+}

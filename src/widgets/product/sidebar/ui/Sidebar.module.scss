@@ -1,0 +1,96 @@
+@use 'sass:math';
+@import 'shared/styles/mixins.scss';
+@import 'shared/styles/variables.scss';
+
+.sidebar {
+	padding: rem(25);
+	background-color: $black2;
+	width: rem(305);
+	height: rem(425);
+	border-radius: 6px;
+	display: flex;
+	flex-direction: column;
+	@media (max-width: $pc) {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.title {
+	font-weight: 600;
+	font-size: rem(16);
+	line-height: math.div(20, 16);
+	color: #fff;
+	text-transform: uppercase;
+	&:not(:last-child) {
+		margin-bottom: rem(30);
+	}
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: rem(100);
+	flex: 1 1 auto;
+	@media (max-width: $pc) {
+		gap: rem(20);
+	}
+}
+
+.categories {
+	display: flex;
+	flex-direction: column;
+	gap: rem(12);
+	max-height: rem(200);
+	overflow: auto;
+	flex: 1 1 auto;
+	&:not(:last-child) {
+		margin-bottom: rem(15);
+	}
+	@media (max-width: $pc) {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+.category {
+	font-weight: 500;
+	font-size: rem(14);
+	line-height: math.div(17, 14);
+	color: $gray1;
+	transition: color 0.2s ease-in-out 0s;
+	&.active {
+		color: $purple1;
+	}
+	&:hover {
+		color: $purple1;
+	}
+	@media (max-width: $pc) {
+		color: $white2;
+		padding: rem(10);
+		border-radius: 25px;
+		background-color: $purple2;
+		&.active {
+			color: $white1;
+		}
+		&:hover {
+			color: $white1;
+		}
+	}
+}
+
+.bottom {
+	font-weight: 500;
+	font-size: rem(12);
+	line-height: math.div(15, 12);
+	color: $gray1;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: rem(15);
+}
+
+.terms {
+	text-decoration: underline !important;
+}

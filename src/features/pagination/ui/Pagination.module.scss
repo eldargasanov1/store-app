@@ -1,0 +1,37 @@
+@use 'sass:math';
+@import 'shared/styles/mixins.scss';
+@import 'shared/styles/variables.scss';
+
+.pagination {
+	display: flex;
+	align-items: center;
+	gap: rem(10);
+
+	li {
+		background-color: $purple2;
+		border-radius: 8px;
+		transition: background-color 0.2s ease-in-out 0s;
+		&:hover {
+			background-color: #8c5cda;
+		}
+		&:active {
+			background-color: #631ad8;
+			position: relative;
+			top: rem(2);
+		}
+		&.active-page {
+			background-color: #8c5cda;
+		}
+	}
+
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		border-radius: 8px;
+		cursor: pointer;
+		user-select: none;
+	}
+}

@@ -1,0 +1,29 @@
+@use 'sass:math';
+@import 'shared/styles/mixins.scss';
+@import 'shared/styles/variables.scss';
+
+.handle-quantity {
+	display: flex;
+	align-items: center;
+	gap: rem(16);
+}
+
+.quantity {
+	font-size: rem(14);
+	line-height: math.div(17, 14);
+	font-weight: 500;
+	color: $gray1;
+}
+
+.minus,
+.plus {
+	padding: rem(3);
+}
+
+.icon {
+	width: 19px;
+	height: 19px;
+	use {
+		fill: #fff;
+	}
+}

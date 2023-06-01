@@ -1,0 +1,20 @@
+@use 'sass:math';
+@import 'shared/styles/mixins.scss';
+@import 'shared/styles/variables.scss';
+
+.to-cart {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+}
+
+.icon {
+	width: 24px;
+	height: 24px;
+}
+
+.icon-cart {
+	use {
+		fill: $white2;
+	}
+}

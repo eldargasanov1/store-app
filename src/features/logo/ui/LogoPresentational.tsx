@@ -1,7 +1,7 @@
 import { FC, CSSProperties } from 'react';
 import styles from './Logo.module.scss';
 import { Link } from 'react-router-dom';
-import { ReactComponent as LogoIcon } from 'shared/images/logo.svg';
+import { ReactComponent as LogoIcon } from 'images/logo.svg';
 import { useGetCurrentCategory } from 'entities/product';
 
 interface PresentationalProps {

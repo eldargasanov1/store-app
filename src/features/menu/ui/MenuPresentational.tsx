@@ -1,4 +1,4 @@
-import { FC, forwardRef, memo } from 'react';
+import { forwardRef, memo } from 'react';
 import styles from './Menu.module.scss';
 import { Button, MenuButtonProps } from 'shared';
 

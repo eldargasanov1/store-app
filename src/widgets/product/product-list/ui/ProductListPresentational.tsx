@@ -20,7 +20,6 @@ interface PresentationalProps {
 	setFiltersPage: (value: number) => void;
 	setFiltersLimit: (value: number) => void;
 	setIsShowMore: (value: boolean) => void;
-	currentPage: number;
 	pageCount: number;
 	productsLength: number;
 	productsBase: Product[] | undefined;
@@ -38,7 +37,6 @@ export const ProductListPresentational: FC<PresentationalProps> = memo(
 		setFiltersPage,
 		setFiltersLimit,
 		setIsShowMore,
-		currentPage,
 		pageCount,
 		productsLength,
 		productsBase,
@@ -96,7 +94,6 @@ export const ProductListPresentational: FC<PresentationalProps> = memo(
 				)}
 				{isShowMore && productsBase?.length ? (
 					<Pagination
-						currentPage={currentPage}
 						onChangePage={value => setFiltersPage(value)}
 						pageCount={pageCount}
 					/>

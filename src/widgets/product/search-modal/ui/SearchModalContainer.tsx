@@ -99,7 +99,6 @@ export const SearchModalContainer: FC = () => {
 		onClose,
 		products,
 		status,
-		currentPage: modalOptions.page,
 		pageCount,
 	};
 

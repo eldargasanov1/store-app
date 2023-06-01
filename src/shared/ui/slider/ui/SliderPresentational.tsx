@@ -5,7 +5,7 @@ import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/thumbs';
 import './Slider.scss';
-import { Swiper as SwiperType } from 'swiper/types';
+import { Swiper as SwiperType } from 'swiper';
 import { useResize } from 'shared';
 
 interface PresentationalProps {

@@ -22,7 +22,6 @@ export interface SearchModalPresentationalProps {
 	handlePage: (page: number) => void;
 	products: Product[] | undefined;
 	status: StatusQueryType;
-	currentPage: number;
 	pageCount: number;
 }
 
@@ -36,7 +35,6 @@ export const SearchModalPresentational: FC<SearchModalPresentationalProps> = ({
 	handlePage,
 	products,
 	status,
-	currentPage,
 	pageCount,
 }) => {
 	const modalRef = useRef<HTMLDivElement>(null);
@@ -74,7 +72,6 @@ export const SearchModalPresentational: FC<SearchModalPresentationalProps> = ({
 			</div>
 			{products?.length ? (
 				<Pagination
-					currentPage={currentPage}
 					onChangePage={value => handlePage(value)}
 					pageCount={pageCount}
 				/>

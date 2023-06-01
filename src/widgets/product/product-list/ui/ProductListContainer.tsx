@@ -30,7 +30,6 @@ export const ProductListContainer: FC<ContainerProps> = memo(props => {
 		setFiltersPage: listPropsRest.setFiltersPage,
 		setFiltersLimit: listPropsRest.setFiltersLimit,
 		setIsShowMore: listPropsRest.setIsShowMore,
-		currentPage: filters.page,
 		pageCount: listPropsRest.pageCount,
 		productsLength: listPropsRest.productsLength,
 		productsBase: listPropsRest.productsBase,

@@ -1,6 +1,6 @@
 import { FC, memo } from 'react';
 import styles from './SmallBanner.module.scss';
-import { Button, SITE_URL } from 'shared';
+import { Button } from 'shared';
 import { Link } from 'react-router-dom';
 
 interface PresentationalProps {
@@ -22,7 +22,7 @@ export const SmallBannerPresentational: FC<PresentationalProps> = memo(
 					Shop Now
 				</Button>
 				<div className={`_image-ibg ${styles['image']}`}>
-					<img src={`${SITE_URL}/src/shared/images/computer.png`} alt='' />
+					<img src='images/computer.png' alt='' />
 				</div>
 			</div>
 		);

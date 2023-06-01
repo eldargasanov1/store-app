@@ -1,6 +1,6 @@
 import { ReactElement, forwardRef, memo } from 'react';
 import styles from './UserProfile.module.scss';
-import { Button, SITE_URL, StatusQueryType, User } from 'shared';
+import { Button, StatusQueryType, User } from 'shared';
 import { UserProfileSkeleton } from './UserProfileSkeleton';
 
 interface PresentationalProps {
@@ -14,8 +14,7 @@ interface PresentationalProps {
 export const UserProfilePresentational = memo(
 	forwardRef<HTMLDivElement, PresentationalProps>(
 		({ user, secondaryAction, onClick, isActionOpen, status }, ref) => {
-			const userAvatarUrl =
-				user?.avatar || `${SITE_URL}/src/shared/images/avatar.jpg`;
+			const userAvatarUrl = user?.avatar || `images/avatar.jpg`;
 			const userName = user?.name || 'Guest';
 
 			return (

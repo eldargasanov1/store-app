@@ -6,4 +6,3 @@ const getEnvVar = (key: string) => {
 };
 
 export const BASE_URL = getEnvVar('VITE_BASE_URL');
-export const SITE_URL = window.location.origin;

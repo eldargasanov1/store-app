@@ -1,14 +1,13 @@
 import { FC } from 'react';
 import { ProductCardPresentational } from './ProductCardPresentational';
-import { Product, SITE_URL } from 'shared';
+import { Product } from 'shared';
 
 interface ContainerProps {
 	product: Product;
 }
 
 export const ProductCardContainer: FC<ContainerProps> = ({ product }) => {
-	const imageSrc =
-		product.images[0] || `${SITE_URL}/src/shared/images/shoe.png`;
+	const imageSrc = product.images[0] || `images/shoe.png`;
 	const linkTo = `/${product.category.name.toLowerCase()}/${product.id}`;
 
 	return (

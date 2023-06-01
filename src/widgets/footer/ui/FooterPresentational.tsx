@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import styles from './Footer.module.scss';
-import { Container, SITE_URL } from 'shared';
+import { Container } from 'shared';
 import { Logo } from 'features/logo';
 
 export const FooterPresentational: FC = () => {
@@ -10,23 +10,17 @@ export const FooterPresentational: FC = () => {
 			<div className={styles.socials}>
 				<a href='https://youtube.com' target='_blank' rel='noreferrer'>
 					<svg className={styles['icon']}>
-						<use
-							xlinkHref={`${SITE_URL}/src/shared/images/sprite.svg#youtube`}
-						/>
+						<use xlinkHref='images/sprite.svg#youtube' />
 					</svg>
 				</a>
 				<a href='https://instagram.com' target='_blank' rel='noreferrer'>
 					<svg className={styles['icon']}>
-						<use
-							xlinkHref={`${SITE_URL}/src/shared/images/sprite.svg#instagram`}
-						/>
+						<use xlinkHref='images/sprite.svg#instagram' />
 					</svg>
 				</a>
 				<a href='https://facebook.com' target='_blank' rel='noreferrer'>
 					<svg className={styles['icon']}>
-						<use
-							xlinkHref={`${SITE_URL}/src/shared/images/sprite.svg#facebook`}
-						/>
+						<use xlinkHref='images/sprite.svg#facebook' />
 					</svg>
 				</a>
 			</div>

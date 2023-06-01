@@ -25,7 +25,7 @@ export {
 } from './lib';
 
 /* Config */
-export { BASE_URL, SITE_URL } from './config';
+export { BASE_URL } from './config';
 
 /* Data */
 export { colors, sizes } from './data';

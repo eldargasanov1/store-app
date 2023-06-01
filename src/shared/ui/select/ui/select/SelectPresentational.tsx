@@ -3,7 +3,7 @@ import styles from './Select.module.scss';
 import { OptionProps, SelectProps } from 'shared';
 import { useEvent, useOutsideClick } from 'shared/lib';
 import clsx from 'clsx';
-import { Option, SITE_URL } from 'shared';
+import { Option } from 'shared';
 
 export const SelectPresentational: FC<SelectProps> = ({
 	selected = null,
@@ -47,7 +47,7 @@ export const SelectPresentational: FC<SelectProps> = ({
 					{selected?.title || placeholder}
 				</div>
 				<svg className={styles['icon']}>
-					<use href={`${SITE_URL}/src/shared/images/sprite.svg#plus`} />
+					<use href='images/sprite.svg#plus' />
 				</svg>
 			</button>
 			{isOpen && (

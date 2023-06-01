@@ -1,7 +1,7 @@
 import { forwardRef, memo, useState } from 'react';
 import styles from './AuthForm.module.scss';
 import { LoginFormEntity, RegisterFormEntity } from 'entities/user';
-import { Button, SITE_URL } from 'shared';
+import { Button } from 'shared';
 
 interface PresentationalProps {
 	onClose: () => void;
@@ -25,7 +25,7 @@ export const AuthFormPresentational = memo(
 					onClick={onClose}
 				>
 					<svg className={styles['icon']}>
-						<use href={`${SITE_URL}/src/shared/images/sprite.svg#close`} />
+						<use href='images/sprite.svg#close' />
 					</svg>
 				</Button>
 				<Button

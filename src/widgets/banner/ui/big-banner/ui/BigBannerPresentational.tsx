@@ -1,7 +1,7 @@
 import { FC, useRef, memo } from 'react';
 import styles from './BigBanner.module.scss';
 import { Link } from 'react-router-dom';
-import { Button, SITE_URL, highlightLetters } from 'shared';
+import { Button, highlightLetters } from 'shared';
 import clsx from 'clsx';
 
 interface PresentationalProps {
@@ -54,14 +54,14 @@ export const BigBannerPresentational: FC<PresentationalProps> = memo(
 							[styles['shoe']]: styles['shoe'],
 						})}
 					>
-						<img src={`${SITE_URL}/src/shared/images/shoe.png`} alt='' />
+						<img src='images/shoe.png' alt='' />
 					</div>
 					<div
 						className={clsx('_image-ibg', {
 							[styles['devices']]: styles['devices'],
 						})}
 					>
-						<img src={`${SITE_URL}/src/shared/images/devices.png`} alt='' />
+						<img src='images/devices.png' alt='' />
 						<div className='image-text'></div>
 					</div>
 				</div>
@@ -70,7 +70,7 @@ export const BigBannerPresentational: FC<PresentationalProps> = memo(
 						[styles['image']]: styles['image'],
 					})}
 				>
-					<img src={`${SITE_URL}/src/shared/images/banner.png`} alt='' />
+					<img src='images/banner.png' alt='' />
 					<div className={styles['image-text']} ref={imageTextRef}></div>
 				</div>
 			</div>

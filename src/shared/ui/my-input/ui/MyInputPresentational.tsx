@@ -2,7 +2,6 @@ import { FC, InputHTMLAttributes } from 'react';
 import styles from './MyInput.module.scss';
 import clsx from 'clsx';
 import { UseFormRegisterReturn } from 'react-hook-form';
-import { SITE_URL } from 'shared';
 
 interface PresentationalProps extends InputHTMLAttributes<HTMLInputElement> {
 	after?: any;
@@ -31,9 +30,7 @@ export const MyInputPresentational: FC<PresentationalProps> = ({
 					>
 						{rest.type === 'search' && (
 							<svg className={styles['icon']}>
-								<use
-									xlinkHref={`${SITE_URL}/src/shared/images/sprite.svg#search`}
-								/>
+								<use xlinkHref='images/sprite.svg#search' />
 							</svg>
 						)}
 						<input {...registerProps} {...rest} />
